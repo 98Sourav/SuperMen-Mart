@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <form action="" method="get">
+  <h2>Login</h2>
+  <br>
+  <label for="fname">UserName</label>
+  <input type="text" id="fname" name="fname" pattern="^[A-Za-z\s\-]+$"  title="Name should not contain number or digit" required><br>
+
+  <label for="pass">Password</label>
+  <input type="password" id="pass" name="pass" 
+       pattern="^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$" 
+       title="Password must be at least 8 characters long and include at least 1 number and 1 special character (!@#$%^&*)" 
+       required><br>
+
+  <input type="submit" value="Login">
+</form>
+</body>
+</html>

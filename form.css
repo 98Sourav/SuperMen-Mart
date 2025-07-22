@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url("images/mens.jpg");
+  background-size: cover;            
+  background-repeat: no-repeat;      
+  background-position: center;       
+  background-attachment: fixed;  
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2{
+  text-align: center;
+  font-weight: 900;
+  font-size:30px;
+  color:rgba(0, 0, 0, 0.658);
+}
+
+form {
+  background-color:palegoldenrod;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+}
+
+form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+  border-color: #5b9bd5;
+  outline: none;
+}
+
+form input[type="radio"] {
+  margin-right: 8px;
+}
+
+
+form input[type="submit"] {
+  width: 90%;
+  padding: 12px;
+  background-color: #eb7f27;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #4176aa;
+}
+
+form select {
+  appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.signin {
+  text-align: center;
+}
+
+
+/* Responsive Design for Mobile Screens (less than 600px) */
+@media screen and (max-width: 600px) {
+  body {
+    background-size: cover;          
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: scroll;  
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  form input[type="submit"] {
+    width: 100%;
+  }
+}
