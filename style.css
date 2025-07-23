@@ -64,6 +64,7 @@ header.header {
   padding: 10px;
   border-radius: 6px;
   transition: background 0.3s;
+  font-size: 18px;
 }
 
 .nav-menu a:hover {
@@ -386,6 +387,7 @@ iframe {
     background-color: #212529;
     width: 100%;
   }
+
 
   .menu-toggle {
     display: block;
