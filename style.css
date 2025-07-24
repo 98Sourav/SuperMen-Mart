@@ -16,6 +16,7 @@ body {
   background-image:linear-gradient(to right,rgba(243, 231, 220, 0.733),rgba(238, 230, 230, 0.651));
   color: #222;
   font-size: 15px;
+  overflow-x: hidden;
 }
 
 header.header {
@@ -100,6 +101,7 @@ header.header {
   cursor: pointer;
   border: none;
 }
+
 
 .menu-toggle {
   display: none;
@@ -393,13 +395,21 @@ iframe {
     display: block;
     position: absolute;
     top: 15px;
-    right: 20px;
+    right: 9px;
   }
 }
 
 @media screen and (max-width: 600px) {
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #212529;
+    width: 100%;
+  }
+  
   .hero {
-    height: 60vh;
+    height: 70vh;
     background-position: top;
     padding: 0 10px;
   }
@@ -407,6 +417,7 @@ iframe {
   .hero-text {
     font-size: 28px;
   }
+  
 
   .hero-btn a {
     font-size: 16px;
@@ -459,12 +470,13 @@ iframe {
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
 figure.snip1390 {
   font-family: 'Roboto', Arial, sans-serif;
   position: relative;
   overflow: hidden;
   margin: 10px;
-  min-width: 230px;
+  min-width: 222px;
   max-width: 315px;
   width: 100%;
   color: #000000;
@@ -473,35 +485,39 @@ figure.snip1390 {
   background-color: #2C3447;
   padding: 30px;
   background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 10px 15px;
   transition: transform 0.3s ease;
 }
 
-figure.snip1390:hover{
-  transform: scale(1.1);
+figure.snip1390:hover {
+  transform: scale(1.05);
   cursor: pointer;
-} 
+}
 
 figure.snip1390 figcaption {
   width: 100%;
 }
+
 figure.snip1390 h2,
 figure.snip1390 h4,
 figure.snip1390 blockquote {
   margin: 0;
 }
+
 figure.snip1390 h2,
 figure.snip1390 h4 {
   font-weight: 300;
 }
+
 figure.snip1390 h2 {
   color: #ffffff;
 }
+
 figure.snip1390 h4 {
   color: #a6a6a6;
 }
+
 figure.snip1390 blockquote {
   font-size: 1em;
   padding: 45px 20px 40px 50px;
@@ -512,6 +528,7 @@ figure.snip1390 blockquote {
   text-align: left;
   position: relative;
 }
+
 figure.snip1390 blockquote:before {
   font-family: 'FontAwesome';
   content: "\201C";
@@ -522,6 +539,7 @@ figure.snip1390 blockquote:before {
   top: 0px;
   left: 20px;
 }
+
 figure.snip1390 .profile {
   width: 100px;
   border-radius: 50%;
@@ -531,7 +549,44 @@ figure.snip1390 .profile {
   border: solid 5px #A6A57A;
 }
 
-.testimonial{
+.testimonial {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .testimonial {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  figure.snip1390 {
+    max-width: 90%;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  figure.snip1390 {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  figure.snip1390 blockquote {
+    padding: 30px 15px 30px 40px;
+  }
+
+  figure.snip1390 blockquote:before {
+    font-size: 50px;
+    left: 10px;
+  }
+
+  figure.snip1390 .profile {
+    width: 80px;
+  }
 }
