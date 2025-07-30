@@ -6,7 +6,9 @@
   <title>Welcome to SuperMenMart</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" type="images" href="/images/fav-icon.png">
+  <link rel="icon" type="images" href="./images/fav-icon.png">
+   <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 </head>
 <body>
 
@@ -14,8 +16,8 @@
     <a href="#" class="logo">
       <img src="images/logo_new.png" alt="Logo" class="logo-img"> SuperMenMart
     </a>
-    <span class="menu-toggle">&#9776;</span>
-    <ul class="nav-menu">
+    <span class="menu-toggle" onclick="myFunction()">&#9776;</span>
+    <ul class="nav-menu" id="menu">
       <li><a href="#">Home</a></li>
       <li><a href="form.html">Login</a></li>
       <li class="dropdown">
@@ -31,7 +33,6 @@
     </ul>
   </header>
 
-  <section class="hero">
     <div class="carousel">
     <div class="slides">
       <div class="slide"><img src="images/sale.png"></div>
@@ -39,7 +40,6 @@
       <div class="slide"><img src="images/sale-banner.jpg "></div>
     </div>
   </div>
-  </section>
 
   <section id="product-list">
     <h1>Featured Products</h1>
@@ -57,15 +57,15 @@
         <button>Add to Cart</button>
       </div>
       <div class="cart">
-        <img src="images/apple_phone.jpg" alt="Shirt">
-        <h2>Stylish Shirt</h2>
-        <p class="price">₹999</p>
+        <img src="images/jeans.jpeg" alt="Shirt">
+        <h2>Denium</h2>
+        <p class="price">₹1999</p>
         <button>Add to Cart</button>
       </div>
       <div class="cart">
-        <img src="images/watch.jpeg" alt="Shoes">
-        <h2>Running Shoes</h2>
-        <p class="price">₹1999</p>
+        <img src="images/headphone.jpeg" alt="Shoes">
+        <h2>BoAt</h2>
+        <p class="price">₹1299</p>
         <button>Add to Cart</button>
       </div>
     </div>
@@ -73,16 +73,6 @@
 
   <section class="testimonials">
     <h1>What Our Customers Say</h1>
-    <!-- <div class="testimonial-slider">
-      <div class="testimonial">
-        <p>“SuperMenMart has transformed my shopping experience. Highly recommended!”</p>
-        <h4>– Ayesha, Mumbai</h4>
-      </div>
-      <div class="testimonial">
-        <p>“Great products at affordable prices. I love the design!”</p>
-        <h4>– Ravi, Bangalore</h4>
-      </div>
-    </div> -->
     <div class="testimonial">
     <figure class="snip1390">
   <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample3.jpg" alt="profile-sample3" class="profile" />
@@ -109,51 +99,32 @@
   </section>
 
   <section>
-    <h1>Watch the Latest Drops!</h1>
+    <h1>▶ Watch Our Latest Drops!</h1>
+    
     <div class="video-list">
-      <iframe 
-           src="https://www.youtube.com/embed/e6T34u51MaA?si=v-pnxOlyg97Z6Rpp" 
-           title="YouTube video player" frameborder="0" 
-           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-       <iframe 
-        src="https://www.youtube.com/embed/2Eme-IkdPhM?si=M7-gzLHAjozvxBwR" 
-        title="YouTube video player" frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=e6T34u51MaA" class="video-thumb">
+      <img src="https://img.youtube.com/vi/e6T34u51MaA/hqdefault.jpg" alt="Video 1" />
+      <div class="play-icon"></div>
+    </a>
 
-        <iframe 
-        src="https://www.youtube.com/embed/V9-wiMHcJ_k?si=5LUYUcSRcI7fQ78o" title="YouTube video player" 
-        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=2Eme-IkdPhM" class="video-thumb">
+      <img src="https://img.youtube.com/vi/2Eme-IkdPhM/hqdefault.jpg" alt="Video 2" />
+      <div class="play-icon"></div>
+    </a>
 
-        <iframe 
-         src="https://www.youtube.com/embed/aaVLuXKJ8x0?si=8PQrdZwYp1C3O3ej" 
-         title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+    <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=V9-wiMHcJ_k" class="video-thumb">
+      <img src="https://img.youtube.com/vi/V9-wiMHcJ_k/hqdefault.jpg" alt="Video 3" />
+      <div class="play-icon"></div>
+    </a>
 
-    </div>
+    <a data-fancybox="gallery" href="https://www.youtube.com/watch?v=aaVLuXKJ8x0" class="video-thumb">
+      <img src="https://img.youtube.com/vi/aaVLuXKJ8x0/hqdefault.jpg" alt="Video 4" />
+      <div class="play-icon"></div>
+    </a>
+  </div>
   </section>
 
-  <!-- <section class="container">
-    <form id="reach">
-      <h1>Contact Us</h1>
-      <input type="text" placeholder="Name" required>
-      <input type="email" placeholder="Email" required>
-      <select required>
-        <option value="">Select Subject</option>
-        <option>Order Issue</option>
-        <option>Returns</option>
-        <option>Other</option>
-      </select>
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message">
-    </form>
-  </section> -->
-
-  <footer class="footer">
+    <footer class="footer">
     <div class="footer-main">
       <div>
         <h3>Quick Links</h3>
@@ -189,6 +160,9 @@
   </footer>
 
   <a href="#" id="topBtn" title="Go to top"> ↑</a>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
 
 </body>
 </html>

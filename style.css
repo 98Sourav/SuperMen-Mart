@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-image:linear-gradient(to right,rgba(243, 231, 220, 0.733),rgba(238, 230, 230, 0.651));
+  background-image:linear-gradient(to right, #167ac64a, rgba(80, 80, 80, .6));
   color: #222;
   font-size: 15px;
   overflow-x: hidden;
@@ -159,7 +159,7 @@ h1 {
   font-size: 36px;
   /* background: linear-gradient(90deg, #0077b6, #00b4d8); */
   
-  color: black;
+  color: rgb(15 15 15 / 71%);
   padding: 10px;
   border-radius: 8px;
   margin-bottom: 40px;
@@ -258,7 +258,7 @@ input[type=submit]:hover {
 .video-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 28px;
   justify-content: center;
 }
 
@@ -301,7 +301,7 @@ iframe {
 .footer-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 350px;
 }
 
 .footer a {
@@ -386,8 +386,9 @@ iframe {
   .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: #212529;
-    width: 100%;
+    background-color: #b8df0d;
+    width: 90%;
+    border-radius: 10px 15px;
   }
 
 
@@ -404,8 +405,9 @@ iframe {
   .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: #212529;
-    width: 100%;
+    background-color: #b8df0d;
+    width: 90%;
+    border-radius: 10px 15px;
   }
   
   .hero {
@@ -431,10 +433,9 @@ iframe {
 }
 
 .carousel {
-  width: 97vw;
+  width: 100vw;
   height:80vh;
   overflow: hidden;
-  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -590,3 +591,55 @@ figure.snip1390 .profile {
     width: 80px;
   }
 }
+
+/* Fancy box */
+
+.video-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .video-thumb {
+      position: relative;
+      display: block;
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .video-thumb img {
+      width: 100%;
+      display: block;
+    }
+
+    .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .play-icon::before {
+      content: "";
+      border-style: solid;
+      border-width: 12px 0 12px 20px;
+      border-color: transparent transparent transparent white;
+      margin-left: 4px;
+    }
+
+    .video-thumb:hover .play-icon {
+      background: rgba(230, 57, 70, 0.9);
+    }
+
